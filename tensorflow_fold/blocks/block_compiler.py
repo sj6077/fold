@@ -68,9 +68,6 @@ def main(_):
             'train_op':
                 tensor_or_op_name_to_replica_names[bench.train_op.name][0],
         }
-        if isinstance(bench.lr, tf.Tensor):
-          fetches['lr'] = tensor_or_op_name_to_replica_names[bench.lr.name][0]
-
         
         for i in range(num_iters):
             results = sess.run(fetches)
