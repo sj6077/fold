@@ -75,9 +75,9 @@ def main(_):
     parallax.parallel_run(
         single_gpu_graph,
         run,
-        FLAGS.resource_info_file,
         FLAGS.max_steps,
-        sync=FLAGS.sync)
+        sync=FLAGS.sync,
+        run_option)
 
 
 if __name__ == '__main__':
